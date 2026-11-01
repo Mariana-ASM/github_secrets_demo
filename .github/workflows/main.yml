@@ -29,6 +29,3 @@ jobs:
         run: |
           cd app
           node server.js
-        run: |
-          cd app
-          node server.js
