@@ -24,8 +24,11 @@ jobs:
           npm install
 
       - name: Executar aplicação
-          env: MENSAGEM_SECRETA: ${{ secrets.MENSAGEM_SECRETA }}
-          MENSAGEM_SECRETA: "Minha mensagem secreta"
+        env:
+          MENSAGEM_SECRETA: ${{ secrets.MENSAGEM_SECRETA }}
+        run: |
+          cd app
+          node server.js
         run: |
           cd app
           node server.js
